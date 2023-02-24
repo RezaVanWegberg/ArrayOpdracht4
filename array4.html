@@ -12,23 +12,46 @@
     <h2>Vermenigvuldigen van de twee arrays zijn:</h2>
     <div id="vermenigvuldigen"></div>
 
+    <h2>De tafel van 2:</h2>
+    <div id="tafel2"></div>
+
+    <h2>De tafel van 4:</h2>
+    <div id="tafel4"></div>
+
+    <h2>De tafel van 6:</h2>
+    <div id="tafel6"></div>
+
+    <h2>De tafel van 8:</h2>
+    <div id="tafel8"></div>
+
+
     <script>
         var aantal = parseInt(prompt("Kies een aantal 'bijvoorbeeld 10' "))
         var nummer = parseInt(prompt("Kies een nummer 'bijvoorbeeld 4' "))
 
 
         // Vermenigvuldigen //
-        function Vermenigvuldigen(para1, para2) {
+        function Vermenigvuldigen(para1, para2, tafel = "vermenigvuldigen") {
             for (let i = 1; i <= para1; i++) {
                 let optelElement = document.createElement("p");
                 let optelElementText = document.createTextNode(` ${i} * ${para2} = ${i * para2}`);
                 optelElement.appendChild(optelElementText);
-                document.getElementById("vermenigvuldigen").appendChild(optelElement);
+                document.getElementById(tafel).appendChild(optelElement);
 
             }
         }
 
         Vermenigvuldigen(aantal, nummer)
+
+        Vermenigvuldigen(10, 2, "tafel2")
+
+        Vermenigvuldigen(10, 4, "tafel4")
+
+        Vermenigvuldigen(10, 6, "tafel6")
+
+        Vermenigvuldigen(10, 8, "tafel8")
+
+
     </script>
 </body>
 
